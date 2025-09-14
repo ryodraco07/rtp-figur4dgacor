@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>RTP LIVE SLOT GACOR — FIGUR4D</title>
+<style>
+:root{
+  --bg:#0a0f2b;--card:#10172f;--muted:#a6adbb;--text:#e8ecf1;--brand:#ffcf2d;
+  --good:#2ecc71;--mid:#f1c40f;--bad:#e74c3c;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font-family:ui-sans-serif,system-ui,Segoe UI,Roboto,Arial}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:16px}
+header{display:flex;justify-content:center;margin:10px 0 14px}
+header img{max-height:90px;width:auto}
+.hero{position:relative;border-radius:20px;background:linear-gradient(135deg,#131a44,#0e1638 60%);padding:24px;margin-bottom:16px}
+.hero h1{margin:0 0 8px 0;font-size:40px;font-weight:900}
+.tag{display:inline-block;background:var(--brand);color:#111;padding:6px 10px;border-radius:999px;font-weight:800;font-size:12px}
+.cta{display:inline-block;margin-left:12px;padding:10px 14px;border-radius:12px;background:var(--brand);color:#111;font-weight:900;border:1px solid rgba(0,0,0,.25)}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin:16px 0}
+.tool{display:flex;gap:8px;align-items:center;background:#0f183c;border:1px solid rgba(255,255,255,.08);padding:8px 10px;border-radius:12px}
+.tool input,.tool select{background:transparent;border:0;color:var(--text);outline:0}
+.providers{display:flex;gap:10px;overflow:auto}
+.pill{white-space:nowrap;font-size:12px;background:#121a3b;border:1px solid rgba(255,255,255,.08);padding:8px 12px;border-radius:999px;cursor:pointer}
+.pill.active{background:#24304b}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+@media (max-width:1100px){.grid{grid-template-columns:repeat(4,1fr)}}
+@media (max-width:780px){.grid{grid-template-columns:repeat(2,1fr)} .hero h1{font-size:34px}}
+.card{background:var(--card);border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.06)}
+.thumb{aspect-ratio:16/11;background:#151826}
+.pad{padding:12px}
+.title{font-weight:700;font-size:14px;margin:0 0 6px}
+.meta{display:flex;gap:8px;align-items:center;color:var(--muted);font-size:12px}
+.badge{font-size:10px;background:#1d243f;padding:4px 8px;border-radius:999px;border:1px solid rgba(255,255,255,.08)}
+.rtpbar{height:8px;background:#1b2131;border-radius:999px;overflow:hidden;margin-top:10px}
+.rtpbar > i{display:block;height:100%;border-radius:999px;width:0%}
+.btn{display:inline-block;margin-top:10px;padding:8px 12px;border-radius:10px;background:var(--brand);color:#111;font-weight:800;font-size:12px;border:1px solid rgba(0,0,0,.2)}
+footer{opacity:.7;margin:24px 0;font-size:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><img src="LOGOFIGURE4D.png" alt="FIGUR4D"></header>
+
+  <section class="hero">
+    <h1>RTP LIVE <span style="color:var(--brand)">SLOT GACOR</span></h1>
+    <span class="tag">winrate game update </span>
+    <a class="cta" href="https://shortq.org/figur4d-vvip" target="_blank" rel="nofollow noopener">MAIN DI SINI ➜</a>
+  </section>
+
+  <div class="toolbar">
+    <label class="tool">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/></svg>
+      <input id="q" placeholder="Cari game / provider..."/>
+    </label>
+    <label class="tool">Sortir
+      <select id="sort">
+        <option value="rtp-desc">RTP tertinggi</option>
+        <option value="rtp-asc">RTP terendah</option>
+        <option value="az">A → Z</option>
+        <option value="za">Z → A</option>
+      </select>
+    </label>
+    <div id="lastUpdate" style="color:#a6adbb">Memuat…</div>
+  </div>
+
+  <div class="providers" id="providers"></div>
+  <div class="grid" id="grid"></div>
+
+  <!-- DATA INLINE: aman dari CORS & bisa dibuka dari file:/// -->
+  <script id="rtp-data" type="application/json">
+  {
+    "updated_at": "2025-09-14T15:30:00Z",
+    "games": [
+      { "name": "Aztec Gems", "provider": "Pragmatic Play", "rtp": 96.52, "image": "aztecgemsz.webp" },
+      { "name": "Sweet Bonanza 1000", "provider": "Pragmatic Play", "rtp": 96.20, "image": "bonanza1000.webp" },
+      { "name": "Dragon Hatch", "provider": "PG Soft", "rtp": 96.83, "image": "dragonhatch.webp" },
+      { "name": "Fortune Ox", "provider": "PG Soft", "rtp": 96.75, "image": "fortuneox.webp" },
+      { "name": "Gatot Kaca 1000", "provider": "Pragmatic Play", "rtp": 96.40, "image": "gatotkaca1000.webp" },
+      { "name": "Gem Saviour", "provider": "PG Soft", "rtp": 96.92, "image": "gemsaviour.webp" },
+      { "name": "Hot Pot", "provider": "PG Soft", "rtp": 96.70, "image": "hotpot.webp" },
+      { "name": "Lucky Neko", "provider": "PG Soft", "rtp": 97.90, "image": "luckyneko.webp" },
+      { "name": "Mahjong Ways 3", "provider": "PG Soft", "rtp": 96.25, "image": "mahjongwins3.webp" },
+      { "name": "Mahjong Ways", "provider": "PG Soft", "rtp": 97.23, "image": "mj1.webp" },
+      { "name": "Mahjong Ways 2", "provider": "PG Soft", "rtp": 95.80, "image": "mj2.webp" },
+      { "name": "Gates of Olympus 1000", "provider": "Pragmatic Play", "rtp": 96.75, "image": "olympus1000.webp" },
+      { "name": "Gates of Olympus Super Scatter", "provider": "Pragmatic Play", "rtp": 96.88, "image": "olympussuperscatter.webp" },
+      { "name": "Starlight Princess", "provider": "Pragmatic Play", "rtp": 98.15, "image": "Starlight Princess.webp" },
+      { "name": "Starlight Princess 1000", "provider": "Pragmatic Play", "rtp": 97.85, "image": "Starlight Princess1000.webp" },
+      { "name": "Wild Bandito", "provider": "PG Soft", "rtp": 96.73, "image": "wildbandito.webp" },
+      { "name": "Koi Gate", "provider": "Habanero", "rtp": 96.00, "image": "koigate.webp" }
+    ]
+  }
+  </script>
+
+  <footer>
+    Pastikan nama file gambar sama persis (spasi & huruf besar/kecil). Jika gambar tidak ditemukan, kartu menampilkan placeholder.
+  </footer>
+</div>
+
+<script>
+const config = { good:96, mid:92 };
+let state = { raw: [], provider:'all', q:'', sort:'rtp-desc', t:null };
+
+const el = s=>document.querySelector(s);
+const grid = el('#grid'); const providersWrap = el('#providers');
+const PLAY_URL = 'https://shortq.org/figur4d-vvip';
+const PLACEHOLDER = 'data:image/svg+xml,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 viewBox%3D%220 0 400 300%22%3E%3Cdefs%3E%3ClinearGradient id%3D%22g%22 x1%3D%220%22 x2%3D%221%22%3E%3Cstop offset%3D%220%22 stop-color%3D%23151a28/%3E%3Cstop offset%3D%221%22 stop-color%3D%2324304b/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width%3D%22400%22 height%3D%22300%22 fill%3D%22url(%23g)%22/%3E%3Ctext x%3D%2250%25%22 y%3D%2252%25%22 text-anchor%3D%22middle%22 dominant-baseline%3D%22middle%22 font-size%3D%2218%22 fill%3D%22%23a6adbb%22%3ENO%20IMAGE%3C/text%3E%3C/svg%3E';
+
+function imgUrl(u){
+  if(!u || !u.trim()) return PLACEHOLDER;
+  const s = u.trim();
+  if(/^data:/.test(s) || /^https?:/i.test(s)) return s;
+  return encodeURI(s); // encode spasi/karakter khusus
+}
+function fmtRtp(n){ return (Math.round(n*100)/100).toFixed(2)+'%'}
+function barColor(v){ if(v>=config.good)return 'linear-gradient(90deg,var(--mid),var(--good))';
+  if(v>=config.mid)return 'linear-gradient(90deg,#d35400,var(--mid))';
+  return 'linear-gradient(90deg,#a83232,var(--bad))'; }
+
+function renderProviders(){
+  const provs = ['all',...new Set(state.raw.map(g=>g.provider))];
+  providersWrap.innerHTML = provs.map(p=>`<button class="pill ${state.provider===p?'active':''}" data-prov="${p}">${p==='all'?'Semua Provider':p}</button>`).join('');
+  providersWrap.querySelectorAll('button').forEach(b=>{
+    b.addEventListener('click',()=>{state.provider=b.dataset.prov; renderGrid();
+      providersWrap.querySelectorAll('button').forEach(x=>x.classList.remove('active')); b.classList.add('active');});
+  });
+}
+function getFiltered(){
+  const q = state.q.toLowerCase();
+  let arr = state.raw.filter(g =>
+    (state.provider==='all'||g.provider===state.provider) &&
+    (!q || g.name.toLowerCase().includes(q) || g.provider.toLowerCase().includes(q))
+  );
+  switch(state.sort){
+    case 'rtp-desc': arr.sort((a,b)=>b.rtp-a.rtp); break;
+    case 'rtp-asc': arr.sort((a,b)=>a.rtp-b.rtp); break;
+    case 'az': arr.sort((a,b)=>a.name.localeCompare(b.name)); break;
+    case 'za': arr.sort((a,b)=>b.name.localeCompare(a.name)); break;
+  }
+  return arr;
+}
+function renderGrid(){
+  const items = getFiltered();
+  grid.innerHTML = items.map(g=>`
+    <article class="card">
+      <div class="thumb" style="background:url('${imgUrl(g.image)}') center/cover"></div>
+      <div class="pad">
+        <h3 class="title">${g.name}</h3>
+        <div class="meta"><span class="badge">${g.provider}</span><span>RTP: <b>${fmtRtp(g.rtp)}</b></span></div>
+        <div class="rtpbar"><i style="width:${Math.max(0,Math.min(100,g.rtp))}%;background:${barColor(g.rtp)}"></i></div>
+        <a class="btn" target="_blank" rel="nofollow noopener"
+           href="${PLAY_URL}?game=${encodeURIComponent(g.name)}&provider=${encodeURIComponent(g.provider)}">Main di sini</a>
+      </div>
+    </article>`).join('');
+}
+function renderAll(){ renderProviders(); renderGrid();
+  const t = state.t ? new Date(state.t) : new Date();
+  document.getElementById('lastUpdate').textContent = 'Terakhir update: ' + t.toLocaleString('id-ID'); }
+
+function loadData(){
+  try{
+    const inline = document.getElementById('rtp-data');
+    const txt = inline ? inline.textContent.trim() : '';
+    if(!txt) throw new Error('Inline JSON kosong');
+    const json = JSON.parse(txt);
+    state.raw = Array.isArray(json.games)?json.games:[];
+    state.t   = json.updated_at || new Date().toISOString();
+  }catch(e){
+    console.warn('Gagal baca data inline, pakai default minimal.', e);
+    state.raw = []; state.t = new Date().toISOString();
+  }
+  renderAll();
+}
+
+document.getElementById('q').addEventListener('input',e=>{state.q=e.target.value;renderGrid()});
+document.getElementById('sort').addEventListener('change',e=>{state.sort=e.target.value;renderGrid()});
+
+loadData(); // tidak ada fetch; aman dari CORS
+</script>
+</body>
+</html>
