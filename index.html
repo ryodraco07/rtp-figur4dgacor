@@ -46,7 +46,7 @@ footer{opacity:.7;margin:24px 0;font-size:12px}
 
   <section class="hero">
     <h1>RTP LIVE <span style="color:var(--brand)">SLOT GACOR</span></h1>
-    <span class="tag">winrate game update </span>
+    <span class="tag">winrate game update</span>
     <a class="cta" href="https://shortq.org/figur4d-vvip" target="_blank" rel="nofollow noopener">MAIN DI SINI ➜</a>
   </section>
 
@@ -69,7 +69,7 @@ footer{opacity:.7;margin:24px 0;font-size:12px}
   <div class="providers" id="providers"></div>
   <div class="grid" id="grid"></div>
 
-  <!-- DATA INLINE: aman dari CORS & bisa dibuka dari file:/// -->
+  <!-- DATA INLINE -->
   <script id="rtp-data" type="application/json">
   {
     "updated_at": "2025-09-14T15:30:00Z",
@@ -156,9 +156,18 @@ function renderGrid(){
       </div>
     </article>`).join('');
 }
-function renderAll(){ renderProviders(); renderGrid();
-  const t = state.t ? new Date(state.t) : new Date();
-  document.getElementById('lastUpdate').textContent = 'Terakhir update: ' + t.toLocaleString('id-ID'); }
+function renderAll(){ renderProviders(); renderGrid(); }
+
+// ---- CLOCK REALTIME (update label tiap detik) ----
+const lastEl = document.getElementById('lastUpdate');
+function startClock(){
+  function tick(){
+    lastEl.textContent = 'Terakhir update: ' + new Date().toLocaleString('id-ID');
+  }
+  tick();
+  if (window.__clock) clearInterval(window.__clock);
+  window.__clock = setInterval(tick, 1000);
+}
 
 function loadData(){
   try{
@@ -178,7 +187,8 @@ function loadData(){
 document.getElementById('q').addEventListener('input',e=>{state.q=e.target.value;renderGrid()});
 document.getElementById('sort').addEventListener('change',e=>{state.sort=e.target.value;renderGrid()});
 
-loadData(); // tidak ada fetch; aman dari CORS
+loadData();   // render data
+startClock(); // jalankan jam realtime
 </script>
 </body>
 </html>
