@@ -5,32 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>RTP LIVE SLOT GACOR — FIGUR4D</title>
 <style>
-:root{
-  --bg:#0a0f2b;--card:#10172f;--muted:#a6adbb;--text:#e8ecf1;--brand:#ffcf2d;
-  --good:#2ecc71;--mid:#f1c40f;--bad:#e74c3c;
-}
-*{box-sizing:border-box}
-html,body{margin:0;background:var(--bg);color:var(--text);font-family:ui-sans-serif,system-ui,Segoe UI,Roboto,Arial}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:1200px;margin:0 auto;padding:16px}
+:root{ --bg:#0a0f2b;--card:#10172f;--muted:#a6adbb;--text:#e8ecf1;--brand:#ffcf2d;--good:#2ecc71;--mid:#f1c40f;--bad:#e74c3c;}
+*{box-sizing:border-box} html,body{margin:0;background:var(--bg);color:var(--text);font-family:ui-sans-serif,system-ui,Segoe UI,Roboto,Arial}
+a{color:inherit;text-decoration:none} .wrap{max-width:1200px;margin:0 auto;padding:16px}
 
-/* HEADER: banner + logo */
-.header-hero{
-  position:relative;border-radius:14px;overflow:hidden;height:120px;
-  background:url('baner.png') center/cover no-repeat;
-  margin:12px 0 8px;
-  border:1px solid rgba(255,255,255,.08);
-}
-.header-hero .logo{
-  position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
-}
-.header-hero .logo img{ height:64px; width:auto; filter:drop-shadow(0 2px 6px rgba(0,0,0,.5)); }
+/* HEADER */
+.header-hero{position:relative;border-radius:14px;overflow:hidden;height:120px;background:url('baner.png') center/cover no-repeat;margin:12px 0 8px;border:1px solid rgba(255,255,255,.08)}
+.header-hero .logo{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.header-hero .logo img{height:64px;width:auto;filter:drop-shadow(0 2px 6px rgba(0,0,0,.5))}
 
-/* HERO TITLE */
-.hero{
-  position:relative;border-radius:20px;background:linear-gradient(135deg,#131a44,#0e1638 60%);
-  padding:24px;margin-bottom:14px;border:1px solid rgba(255,255,255,.06)
-}
+/* TITLE */
+.hero{position:relative;border-radius:20px;background:linear-gradient(135deg,#131a44,#0e1638 60%);padding:24px;margin-bottom:14px;border:1px solid rgba(255,255,255,.06)}
 .hero h1{margin:0 0 8px 0;font-size:36px;font-weight:900}
 .tag{display:inline-block;background:var(--brand);color:#111;padding:6px 10px;border-radius:999px;font-weight:800;font-size:12px}
 .cta{display:inline-block;margin-left:12px;padding:10px 14px;border-radius:12px;background:var(--brand);color:#111;font-weight:900;border:1px solid rgba(0,0,0,.25)}
@@ -40,12 +25,12 @@ a{color:inherit;text-decoration:none}
 .tool{display:flex;gap:8px;align-items:center;background:#0f183c;border:1px solid rgba(255,255,255,.08);padding:8px 10px;border-radius:12px}
 .tool input,.tool select{background:transparent;border:0;color:var(--text);outline:0}
 
-/* PROVIDER PILLS */
+/* PROVIDERS */
 .providers{display:flex;gap:10px;overflow:auto;padding-bottom:4px}
 .pill{white-space:nowrap;font-size:12px;background:#121a3b;border:1px solid rgba(255,255,255,.08);padding:8px 12px;border-radius:999px;cursor:pointer}
 .pill.active{background:#24304b}
 
-/* GRID CARDS */
+/* GRID */
 .grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
 @media (max-width:1100px){.grid{grid-template-columns:repeat(4,1fr)}}
 @media (max-width:780px){.grid{grid-template-columns:repeat(2,1fr)} .hero h1{font-size:30px}}
@@ -61,34 +46,35 @@ a{color:inherit;text-decoration:none}
 .btn{display:inline-block;margin-top:10px;padding:8px 12px;border-radius:10px;background:var(--brand);color:#111;font-weight:800;font-size:12px;border:1px solid rgba(0,0,0,.2)}
 .btn:hover{filter:brightness(.95)}
 
-/* TOAST NOTIF (kecil kiri-atas) */
-.toast{
-  position:fixed; top:10px; left:10px; z-index:9999;
-  display:none; align-items:center; gap:8px;
-  background:#fff; color:#111; border-radius:10px; padding:8px 12px;
-  box-shadow:0 6px 16px rgba(0,0,0,.25); font-size:12px; line-height:1.2;
-}
-.toast img{height:20px; width:auto}
+/* TOAST */
+.toast{position:fixed;top:10px;left:10px;z-index:9999;display:none;align-items:center;gap:8px;background:#fff;color:#111;border-radius:10px;padding:8px 12px;box-shadow:0 6px 16px rgba(0,0,0,.25);font-size:12px}
+.toast img{height:20px;width:auto}
 
-/* FOOTER */
-footer{opacity:.75;margin:18px 0 24px;font-size:12px;text-align:center}
+/* MODAL POLA */
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.55);z-index:9998}
+.modal .box{width:min(820px,92vw);background:#0f183c;color:#eaf0ff;border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden}
+.modal .head{display:flex;gap:14px;padding:16px;background:#14214b;border-bottom:1px solid rgba(255,255,255,.06)}
+.modal .head img{width:110px;height:110px;object-fit:cover;border-radius:12px;border:1px solid rgba(255,255,255,.08)}
+.modal .head .meta h3{margin:0 0 6px;font-size:20px}
+.modal .sect{padding:12px 16px;border-top:1px dashed rgba(255,255,255,.09)}
+.badgelist{display:flex;gap:8px;flex-wrap:wrap}
+.badge2{background:#1b2a5c;border:1px solid rgba(255,255,255,.08);padding:4px 8px;border-radius:8px;font-size:12px}
+.pola ul{list-style:none;margin:0;padding:0} .pola li{display:flex;justify-content:space-between;gap:8px;padding:6px 0;border-bottom:1px dashed rgba(255,255,255,.06)}
+.ok{color:#22c55e;font-weight:700} .no{color:#ef4444;font-weight:700}
+.modal .foot{display:flex;justify-content:center;padding:14px}
+.closeBtn{background:#ffd54a;color:#111;font-weight:900;border:1px solid rgba(0,0,0,.25);padding:8px 14px;border-radius:10px;cursor:pointer}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <!-- Banner header -->
-  <div class="header-hero">
-    <div class="logo"><img src="LOGOFIGURE4D.png" alt="FIGUR4D"></div>
-  </div>
+  <div class="header-hero"><div class="logo"><img src="LOGOFIGURE4D.png" alt="FIGUR4D"></div></div>
 
-  <!-- Title -->
   <section class="hero">
     <h1>RTP LIVE <span style="color:var(--brand)">SLOT GACOR</span></h1>
     <span class="tag">winrate game update</span>
     <a class="cta" href="https://shortq.org/figur4d-vvip" target="_blank" rel="nofollow noopener">MAIN DI SINI ➜</a>
   </section>
 
-  <!-- Toolbar -->
   <div class="toolbar">
     <label class="tool"><input id="q" placeholder="Cari game / provider..."/></label>
     <label class="tool">Sortir
@@ -102,40 +88,39 @@ footer{opacity:.75;margin:18px 0 24px;font-size:12px;text-align:center}
     <div id="lastUpdate" style="color:#a6adbb">Memuat…</div>
   </div>
 
-  <!-- Providers & Grid -->
   <div class="providers" id="providers"></div>
   <div class="grid" id="grid"></div>
 
-  <!-- Data inline: pastikan file nama sama persis -->
+  <!-- DATA INLINE -->
   <script id="rtp-data" type="application/json">
   {
     "games": [
-      {"name":"Gates of Olympus 1000","provider":"Pragmatic Play","image":"olympus1000.webp"},
-      {"name":"Gates of Olympus Super Scatter","provider":"Pragmatic Play","image":"olympussuperscatter.webp"},
-      {"name":"Starlight Princess","provider":"Pragmatic Play","image":"Starlight Princess.webp"},
-      {"name":"Starlight Princess 1000","provider":"Pragmatic Play","image":"Starlight Princess1000.webp"},
-      {"name":"Sugar Rush 1000","provider":"Pragmatic Play","image":"sugarrush1000.webp"},
-      {"name":"Wild West Gold Megaways","provider":"Pragmatic Play","image":"WildWestGoldMegaways.webp"},
-      {"name":"Triple Pot Gold","provider":"Pragmatic Play","image":"TriplePotGold.webp"},
-      {"name":"Big Bass Bonanza 3 Reeler","provider":"Pragmatic Play","image":"BigBassBonanza3Reeler.webp"},
-      {"name":"Aztec Gems","provider":"Pragmatic Play","image":"aztecgemz.webp"},
-      {"name":"Sweet Bonanza 1000","provider":"Pragmatic Play","image":"bonanza1000.webp"},
-      {"name":"Gatot Kaca 1000","provider":"Pragmatic Play","image":"gatotkaca1000.webp"},
+      {"name":"Gates of Olympus 1000","provider":"Pragmatic Play","image":"olympus1000.webp","buy":true,"dc":true},
+      {"name":"Gates of Olympus Super Scatter","provider":"Pragmatic Play","image":"olympussuperscatter.webp","buy":true,"dc":true},
+      {"name":"Starlight Princess","provider":"Pragmatic Play","image":"Starlight Princess.webp","buy":true,"dc":true},
+      {"name":"Starlight Princess 1000","provider":"Pragmatic Play","image":"Starlight Princess1000.webp","buy":true,"dc":true},
+      {"name":"Sugar Rush 1000","provider":"Pragmatic Play","image":"sugarrush1000.webp","buy":true,"dc":true},
+      {"name":"Wild West Gold Megaways","provider":"Pragmatic Play","image":"WildWestGoldMegaways.webp","buy":true,"dc":true},
+      {"name":"Triple Pot Gold","provider":"Pragmatic Play","image":"TriplePotGold.webp","buy":true,"dc":true},
+      {"name":"Big Bass Bonanza 3 Reeler","provider":"Pragmatic Play","image":"BigBassBonanza3Reeler.webp","buy":false,"dc":true},
+      {"name":"Aztec Gems","provider":"Pragmatic Play","image":"aztecgemz.webp","buy":false,"dc":true},
+      {"name":"Sweet Bonanza 1000","provider":"Pragmatic Play","image":"bonanza1000.webp","buy":true,"dc":true},
+      {"name":"Gatot Kaca 1000","provider":"Pragmatic Play","image":"gatotkaca1000.webp","buy":true,"dc":true},
 
-      {"name":"Mahjong Ways","provider":"PG Soft","image":"mj1.webp"},
-      {"name":"Mahjong Ways 2","provider":"PG Soft","image":"mj2.webp"},
-      {"name":"Mahjong Ways 3","provider":"PG Soft","image":"mahjongwins3.webp"},
-      {"name":"Dragon Hatch","provider":"PG Soft","image":"dragonhatch.webp"},
-      {"name":"Fortune Ox","provider":"PG Soft","image":"fortuneox.webp"},
-      {"name":"Gem Saviour","provider":"PG Soft","image":"gemsaviour.webp"},
-      {"name":"Hot Pot","provider":"PG Soft","image":"hotpot.webp"},
-      {"name":"Lucky Neko","provider":"PG Soft","image":"luckyneko.webp"},
-      {"name":"Cai Shen Wins","provider":"PG Soft","image":"CaiShenWins.webp"},
-      {"name":"Ganesha Fortune","provider":"PG Soft","image":"GaneshaFortune.webp"},
-      {"name":"Wild Bounty Showdown","provider":"PG Soft","image":"WildBountyShowdown.webp"},
-      {"name":"Tree of Fortune","provider":"PG Soft","image":"TreeofFortune.webp"},
-      {"name":"Shaolin Soccer","provider":"PG Soft","image":"ShaolinSoccer.webp"},
-      {"name":"Muay Thai Champion","provider":"PG Soft","image":"MuayThaiChampion.webp"},
+      {"name":"Mahjong Ways","provider":"PG Soft","image":"mj1.webp","buy":false},
+      {"name":"Mahjong Ways 2","provider":"PG Soft","image":"mj2.webp","buy":false},
+      {"name":"Mahjong Ways 3","provider":"PG Soft","image":"mahjongwins3.webp","buy":true},
+      {"name":"Dragon Hatch","provider":"PG Soft","image":"dragonhatch.webp","buy":false},
+      {"name":"Fortune Ox","provider":"PG Soft","image":"fortuneox.webp","buy":false},
+      {"name":"Gem Saviour","provider":"PG Soft","image":"gemsaviour.webp","buy":true},
+      {"name":"Hot Pot","provider":"PG Soft","image":"hotpot.webp","buy":false},
+      {"name":"Lucky Neko","provider":"PG Soft","image":"luckyneko.webp","buy":false},
+      {"name":"Cai Shen Wins","provider":"PG Soft","image":"CaiShenWins.webp","buy":true},
+      {"name":"Ganesha Fortune","provider":"PG Soft","image":"GaneshaFortune.webp","buy":true},
+      {"name":"Wild Bounty Showdown","provider":"PG Soft","image":"WildBountyShowdown.webp","buy":true},
+      {"name":"Tree of Fortune","provider":"PG Soft","image":"TreeofFortune.webp","buy":false},
+      {"name":"Shaolin Soccer","provider":"PG Soft","image":"ShaolinSoccer.webp","buy":false},
+      {"name":"Muay Thai Champion","provider":"PG Soft","image":"MuayThaiChampion.webp","buy":false},
 
       {"name":"Koi Gate","provider":"Habanero","image":"koigate.webp"},
       {"name":"Hot Hot Fruit","provider":"Habanero","image":"HotHotFruit.webp"},
@@ -145,15 +130,32 @@ footer{opacity:.75;margin:18px 0 24px;font-size:12px;text-align:center}
   }
   </script>
 
-  <footer>
-    Data WR ditentukan saat halaman dibuka & stabil sampai Anda refresh • Mayoritas game >90% (tetap ada variasi realistis) • Bar HD dengan glow modern
-  </footer>
+  <footer>Data WR diacak saat refresh & stabil sampai refresh berikutnya • Pola menyesuaikan fitur tiap provider (Pragmatic/PG/Habanero)</footer>
 </div>
 
-<!-- Toast Notif -->
-<div class="toast" id="toast">
-  <img src="LOGOFIGURE4D1.png" alt="FIGUR4D"/>
-  <span id="toastTxt">Loading…</span>
+<!-- TOAST -->
+<div class="toast" id="toast"><img src="LOGOFIGURE4D1.png" alt="FIGUR4D"/><span id="toastTxt">Loading…</span></div>
+
+<!-- MODAL POLA -->
+<div class="modal" id="polaModal">
+  <div class="box">
+    <div class="head">
+      <img id="pImg" src="" alt="">
+      <div class="meta">
+        <h3 id="pTitle">Game</h3>
+        <div class="badgelist">
+          <span class="badge2" id="pProv">Provider</span>
+          <span class="badge2">WR: <b id="pWR">0%</b></span>
+          <span class="badge2">Online: <b id="pOnline">0</b> player</span>
+        </div>
+      </div>
+    </div>
+    <div class="sect pola">
+      <ul id="pList"></ul>
+    </div>
+    <div class="sect" id="pNotes"></div>
+    <div class="foot"><button class="closeBtn" id="pClose">OK</button></div>
+  </div>
 </div>
 
 <script>
@@ -163,7 +165,6 @@ const el = s => document.querySelector(s);
 const grid = el('#grid'), providersWrap = el('#providers');
 const PLAY_URL = 'https://shortq.org/figur4d-vvip';
 
-/* ====== Helper tampilan ====== */
 function fmtRtp(n){ return (Math.round(n*100)/100).toFixed(2)+'%' }
 function barColor(v){
   if(v>=config.good) return 'linear-gradient(90deg,#27ae60,#2ecc71)';
@@ -171,18 +172,74 @@ function barColor(v){
   return 'linear-gradient(90deg,#c0392b,#e74c3c)';
 }
 
-/* ====== RTP biased: banyak >90% ====== */
+/* RTP mayoritas >90% (fix per refresh) */
 function rtpBiased(){
   const r = Math.random();
   let v;
-  if (r < 0.60)       v = 90 + Math.random()*9.5;  // ~60% super tinggi
-  else if (r < 0.84)  v = 80 + Math.random()*9.9;  // ~24% tinggi
-  else if (r < 0.94)  v = 60 + Math.random()*19.9; // ~10% sedang
-  else                v = 40 + Math.random()*19.9; // ~6% rendah
+  if (r < 0.60)       v = 90 + Math.random()*9.5;
+  else if (r < 0.84)  v = 80 + Math.random()*9.9;
+  else if (r < 0.94)  v = 60 + Math.random()*19.9;
+  else                v = 40 + Math.random()*19.9;
   return +v.toFixed(2);
 }
 
-/* ====== Render ====== */
+/* ====== POLA by provider (fitur berbeda) ====== */
+function buildPola(game){
+  const wr = game._rtp;
+  const ok = s => `<span>${s}</span><span class="ok">✔</span>`;
+  const no = s => `<span>${s}</span><span class="no">✖</span>`;
+  const rows = [];
+
+  const rnd = p => Math.random() < p; // util probabilitas
+
+  if (game.provider === 'Pragmatic Play'){
+    // Pragmatic: DC, Turbo/Quick, Auto 10/30/50/100, Buy (opsional)
+    rows.push(rnd(0.9)? ok('Otomatis Spin 100x'): no('Otomatis Spin 100x'));
+    rows.push(rnd(0.75)? ok('Otomatis Spin 50x'):  no('Otomatis Spin 50x'));
+    rows.push(rnd(0.65)? ok('Otomatis Spin 10x'):  no('Otomatis Spin 10x'));
+    rows.push(rnd(0.7)?  ok('Manual Spin 5x'):     no('Manual Spin 5x'));
+    rows.push(rnd(0.7)?  ok('Turbo/Quick ON'):     no('Turbo/Quick ON'));
+    if (game.dc)  rows.push(rnd(0.7)? ok('DC/Double Chance ON'): no('DC/Double Chance ON'));
+    if (game.buy) rows.push(rnd(0.75)? ok('Buy Free Spins (min 600)'): no('Buy Free Spins (min 600)'));
+
+    const note = [
+      'Aktifkan Turbo saat pola macet, matikan bila scatter sering lewat.',
+      'Coba DC ON saat target multiply rendah, OFF bila basegame sudah rame.',
+      'Ulangi pola di atas 2–3 kali bila belum pecah, lalu ganti room.'
+    ];
+    return {rows, note};
+  }
+
+  if (game.provider === 'PG Soft'){
+    // PG: tidak ada DC; Turbo ada; Buy hanya sebagian judul
+    rows.push(rnd(0.85)? ok('Auto 100x (turbo ON)'): no('Auto 100x (turbo ON)'));
+    rows.push(rnd(0.70)? ok('Auto 30x (turbo OFF)'): no('Auto 30x (turbo OFF)'));
+    rows.push(rnd(0.65)? ok('Manual Spin 10x'):      no('Manual Spin 10x'));
+    rows.push(rnd(0.75)? ok('Spin Cepat/Turbo'):     no('Spin Cepat/Turbo'));
+    if (game.buy) rows.push(rnd(0.7)? ok('Buy Feature 1–3x'): no('Buy Feature 1–3x'));
+
+    const note = [
+      'Di PG Soft, fokus ke basegame. Bila deadspin, re-enter room.',
+      'Naikkan bet tipis saat winrate ≥ 95%, turunkan bila ≤ 85%.',
+      'Jaga modal: limit 100–150 spin per sesi.'
+    ];
+    return {rows, note};
+  }
+
+  // Habanero
+  rows.push(rnd(0.8)? ok('Auto 50x'):         no('Auto 50x'));
+  rows.push(rnd(0.7)? ok('Auto 20x'):         no('Auto 20x'));
+  rows.push(rnd(0.7)? ok('Turbo ON'):         no('Turbo ON'));
+  rows.push(no('Buy Feature (tidak tersedia)'));
+
+  const note = [
+    'Cari pola connect berturut—bila 15–20 deadspin, ganti room.',
+    'Main sabar, target kecil 20–30% modal per sesi.'
+  ];
+  return {rows, note};
+}
+
+/* ====== RENDER ====== */
 function renderProviders(){
   const provs = ['all', ...new Set(state.raw.map(g=>g.provider))];
   providersWrap.innerHTML = provs.map(p =>
@@ -196,7 +253,6 @@ function renderProviders(){
     });
   });
 }
-
 function getFiltered(){
   const q = state.q.toLowerCase();
   let arr = state.raw.filter(g =>
@@ -211,55 +267,85 @@ function getFiltered(){
   }
   return arr;
 }
-
 function renderGrid(){
   const items = getFiltered();
-  grid.innerHTML = items.map(g=>`
+  grid.innerHTML = items.map((g,i)=>`
     <article class="card">
       <div class="thumb" style="background:url('${g.image}') center/cover"></div>
       <div class="pad">
         <h3 class="title">${g.name}</h3>
         <div class="meta"><span class="badge">${g.provider}</span><span>RTP: <b>${fmtRtp(g._rtp)}</b></span></div>
         <div class="rtpbar"><i style="width:${g._rtp}%;background:${barColor(g._rtp)}"></i></div>
-        <a class="btn" target="_blank" rel="nofollow noopener"
-           href="${PLAY_URL}?game=${encodeURIComponent(g.name)}&provider=${encodeURIComponent(g.provider)}">Main di sini</a>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <a class="btn" target="_blank" rel="nofollow noopener"
+             href="${PLAY_URL}?game=${encodeURIComponent(g.name)}&provider=${encodeURIComponent(g.provider)}">Main di sini</a>
+          <button class="btn" data-idx="${i}" style="background:#89f7a1">Pola & Trik</button>
+        </div>
       </div>
     </article>
   `).join('');
+
+  // hook tombol pola
+  grid.querySelectorAll('button[data-idx]').forEach(b=>{
+    b.addEventListener('click',()=>openPola(+b.dataset.idx));
+  });
 }
 
-/* ====== Load + init RTP tetap (per refresh) ====== */
+/* ====== MODAL POLA ====== */
+const m = {
+  root: document.getElementById('polaModal'),
+  img:  document.getElementById('pImg'),
+  title:document.getElementById('pTitle'),
+  prov: document.getElementById('pProv'),
+  wr:   document.getElementById('pWR'),
+  online:document.getElementById('pOnline'),
+  list: document.getElementById('pList'),
+  notes:document.getElementById('pNotes'),
+  close:document.getElementById('pClose'),
+};
+m.close.onclick = ()=> m.root.style.display='none';
+m.root.addEventListener('click',e=>{ if(e.target===m.root) m.root.style.display='none' });
+
+function openPola(idx){
+  const g = getFiltered()[idx];
+  if(!g) return;
+  const {rows, note} = buildPola(g);
+  m.img.src = g.image;
+  m.title.textContent = g.name;
+  m.prov.textContent = g.provider;
+  m.wr.textContent   = fmtRtp(g._rtp);
+  m.online.textContent = (800+Math.floor(Math.random()*2400)).toLocaleString('id-ID');
+  m.list.innerHTML = rows.map(r=>`<li>${r}</li>`).join('');
+  m.notes.innerHTML = '<b>NOTE:</b><br>• ' + note.join('<br>• ');
+  m.root.style.display='flex';
+}
+
+/* ====== LOAD ====== */
 function loadData(){
   try{
     const json = JSON.parse(document.getElementById('rtp-data').textContent.trim());
-    state.raw = (json.games||[]).map(g => ({...g, _rtp: rtpBiased()})); // setel RTP sekali
+    state.raw = (json.games||[]).map(g => ({...g, _rtp: rtpBiased()}));
   }catch(e){ console.error(e); state.raw=[]; }
   renderProviders(); renderGrid();
   document.getElementById('lastUpdate').textContent = 'Terakhir update: ' + new Date().toLocaleString('id-ID');
 }
 
-/* ====== UI events ====== */
+/* UI */
 document.getElementById('q').addEventListener('input',e=>{state.q=e.target.value;renderGrid()});
 document.getElementById('sort').addEventListener('change',e=>{state.sort=e.target.value;renderGrid()});
 
-/* ====== Toast notif kecil (seperti screenshot) ====== */
-const toast = document.getElementById('toast');
-const toastTxt = document.getElementById('toastTxt');
+/* TOAST */
+const toast = document.getElementById('toast'), toastTxt = document.getElementById('toastTxt');
 const toastMsgs = [
   "FIGUR4D gacor! Bu*** JP Starlight Princess 1000x",
   "Bukti WD: An*** WD Rp 5.200.000",
   "Member Jo*** menang Sugar Rush 1000 Rp 3.750.000",
   "WD cair Rp 2.100.000 via Dana"
 ];
-function showToast(){
-  toastTxt.textContent = toastMsgs[Math.floor(Math.random()*toastMsgs.length)];
-  toast.style.display = 'flex';
-  setTimeout(()=>toast.style.display='none', 3800);
-}
-setTimeout(showToast, 1500);
-setInterval(showToast, 17000);
+function showToast(){ toastTxt.textContent = toastMsgs[Math.floor(Math.random()*toastMsgs.length)]; toast.style.display='flex'; setTimeout(()=>toast.style.display='none',3800); }
+setTimeout(showToast,1500); setInterval(showToast,17000);
 
-/* Start */
+/* START */
 loadData();
 </script>
 </body>
